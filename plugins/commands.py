@@ -238,6 +238,10 @@ async def channels_info(bot, message):
 
 @Client.on_message(filters.command('stats'))
 async def stats(bot, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     user_id = message.from_user.id
     if user_id not in ADMINS:
         await message.delete()
@@ -254,6 +258,10 @@ async def stats(bot, message):
     
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
@@ -340,6 +348,10 @@ async def save_caption(client, message):
         
 @Client.on_message(filters.command('set_shortlink'))
 async def save_shortlink(client, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
@@ -397,6 +409,10 @@ Force Channels: {str(settings['fsub'])[1:-1] if settings['fsub'] else 'Not Set'}
 
 @Client.on_message(filters.command('set_welcome'))
 async def save_welcome(client, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply("<b>You are Anonymous admin you can't use this command !</b>")
@@ -416,6 +432,10 @@ async def save_welcome(client, message):
         
 @Client.on_message(filters.command('delete'))
 async def delete_file(bot, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     user_id = message.from_user.id
     if user_id not in ADMINS:
         await message.delete()
@@ -437,6 +457,10 @@ async def delete_file(bot, message):
  
 @Client.on_message(filters.command('delete_all'))
 async def delete_all_index(bot, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     user_id = message.from_user.id
     if user_id not in ADMINS:
         await message.delete()
@@ -503,6 +527,10 @@ async def ping(client, message):
     
 @Client.on_message(filters.command("add_premium"))
 async def give_premium_cmd_handler(client, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     user_id = message.from_user.id
     if user_id not in ADMINS:
         await message.delete()
@@ -527,6 +555,10 @@ async def give_premium_cmd_handler(client, message):
         
 @Client.on_message(filters.command("remove_premium"))
 async def remove_premium_cmd_handler(client, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     user_id = message.from_user.id
     if user_id not in ADMINS:
         await message.delete()
@@ -566,6 +598,10 @@ async def plans_list(client, message):
         
 @Client.on_message(filters.command("myplan"))
 async def check_plans_cmd(client, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     user_id  = message.from_user.id
     if await db.has_premium_access(user_id):         
         remaining_time = await db.check_remaining_uasge(user_id)             
@@ -585,6 +621,10 @@ async def check_plans_cmd(client, message):
 
 @Client.on_message(filters.private & filters.command("set_pm_search"))
 async def set_pm_search(client, message):
+    try:
+        await message.react(emoji=random.choice(REACTIONS), big=True)
+    except:
+        await message.react(emoji="⚡️", big=True)
     user_id = message.from_user.id
     bot_id = client.me.id
     if user_id not in ADMINS:
