@@ -934,7 +934,7 @@ async def auto_filter(client, msg, s, spoll=False):
                 InlineKeyboardButton("⚙️ ǫᴜᴀʟɪᴛʏ", callback_data=f"quality#{key}#{req}#0")]
             )
         btn.append(
-            [InlineKeyboardButton(text=f"🗓1/{math.ceil(int(total_results) / MAX_BTN)}", callback_data="buttons"),
+            [InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / MAX_BTN)}", callback_data="buttons"),
              InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
