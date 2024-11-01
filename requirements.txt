@@ -1,4 +1,4 @@
-pyrofork==2.3.47
+pyrofork==2.3.43
 tgcrypto
 motor
 marshmallow
